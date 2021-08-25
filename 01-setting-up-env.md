@@ -9,6 +9,7 @@ Browse, read, watch & study:
 - [Azure portal](https://portal.azure.com/)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
 - [Azure firewall](https://docs.microsoft.com/en-us/azure/firewall/)
+- [Azure network security group](https://docs.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)
 - [Using Linux command line](https://ubuntu.com/tutorials/command-line-for-beginners)
 - [Ubuntu package management](https://ubuntu.com/server/docs/package-management)
 - [Ubuntu firewall](https://ubuntu.com/server/docs/security-firewall)
