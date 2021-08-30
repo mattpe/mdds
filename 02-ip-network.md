@@ -12,7 +12,11 @@ IP network recap.
 
 - 32-bit address space, 4,294,967,296 (2^32) unique addresses
 - special addresses reserved for [special use](https://en.wikipedia.org/wiki/IPv4#Special-use_addresses) and [private networks](https://en.wikipedia.org/wiki/Private_network)
-- Basic configuration example in Ubuntu (`/etc/network/interfaces`)
+- [Network address translation (NAT)](https://en.wikipedia.org/wiki/Network_address_translation) for mapping addresses between private & public networks
+
+  ![NAT Concept](img/NAT-concept.png)
+
+Basic configuration example in Ubuntu (`/etc/network/interfaces`):
 
 ```conf
 # The primary network interface
