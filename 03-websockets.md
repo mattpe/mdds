@@ -19,10 +19,9 @@
   - have blazing-fast messaging
 - Client subscribes / starts listening (future) messages (from server)
 - Server sends messages them whenever it likes
-- **Note:** communication is connected and "stateful", and (also) thus different from Rest paradigm
-
+- **Note:** communication is connected and "stateful", and (also) thus different from REST paradigm
 - [RFC 7936: The WebSocket protocol](https://tools.ietf.org/html/rfc6455)
-- New (application level) protocol, runs on TCP
+- Application level protocol (like HTTP), runs on TCP
 - Protocol prefix: _WS_ or _WSS_
 
 ### Why to use WebSockets?
@@ -42,6 +41,11 @@
 - REST is enough
 - No need for continuous real-time messaging
 - Bit more difficult to implement than REST
+
+### WebSocket API in JS 
+
+- <https://developer.mozilla.org/en-US/docs/Web/API/WebSocket>
+- Client side only
 
 ### WebSockets in Node.js
 
@@ -126,7 +130,7 @@ socket.on('chat message', (msg) => {
 - Receiving messages: *socket.on('message', ...*
 - Client can be identified by *session.id*
 - Server has _rooms_, channels for grouping messages
-- [Sending messages](https://gist.github.com/alexpchin/3f257d0bb813e2c8c476):
+- Sending messages, [Emit cheatsheet](https://socket.io/docs/v4/emit-cheatsheet/):
   - **socket.emit** to sender only
   - **io.emit** to all clients
   - **socket.broadcast.emit** to all clients except sender
@@ -167,7 +171,7 @@ After modifying conf file and enabling modules remember to restart apache with `
 
 ## Assignment 3 - Chat application with Socket.IO
 
-1. Prepare your Azure servcer environment: install _node.js_ and _npm_ (read e.g. [some instructions](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04) and [some other instructions](https://ubunlog.com/en/nodejs-npm-installation-ubuntu-20-04-18-04/))
+1. Prepare your Azure server environment: install _node.js_ and _npm_ (read e.g. [some instructions](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04) and [some other instructions](https://ubunlog.com/en/nodejs-npm-installation-ubuntu-20-04-18-04/))
 1. Create a website on your server in Azure environment, with input text, which will be broadcasted to other people in the same page, check [Get started](https://socket.io/get-started/chat)
     - Add a textfield for a user to give a nickname (e.g. *Charlie* says "Hello")
     - Add _rooms_ in your app: User can choose a room where she belongs to, and messages posted into a room
