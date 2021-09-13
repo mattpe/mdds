@@ -50,7 +50,7 @@ Reading: [HLS vs. MPEG-DASH](https://www.dacast.com/blog/mpeg-dash-vs-hls-what-y
 
 ## Assignment 4
 
-### Part A. Simple HTTP stream distribution
+### Part A. Simple _adaptive_ HTTP stream distribution
 
 Check: [MDN Setting up adaptive streaming media sources](https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
 
