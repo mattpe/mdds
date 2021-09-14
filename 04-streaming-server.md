@@ -93,7 +93,9 @@ Sample html page for the player:
 
 ### Part B. WebRTC
 
-1. Follow the tutorial: [WebRTC and Node.js: Development of a real-time video chat app](https://tsh.io/blog/how-to-write-video-chat-app-using-webrtc-and-nodejs/)
+(NOTE: update coming)
+
+(1. Follow the tutorial: [WebRTC and Node.js: Development of a real-time video chat app](https://tsh.io/blog/how-to-write-video-chat-app-using-webrtc-and-nodejs/))
 1. Publish & test in Azure environment
 
 Returning: Short report including a written description and source code of your solution and screen shots displaying the working system. Check assignment in OMA.  
