@@ -93,16 +93,19 @@ Sample html page for the player:
 
 ### Part B. WebRTC
 
-(NOTE: update coming)
+Read: [Google code labs](https://codelabs.developers.google.com/codelabs/webrtc-web) and watch [WebRTC Tutorial | Video Chat App Using Native WebRTC API From Scratch](https://www.youtube.com/watch?v=JhyY8LdAQHU)
 
-(1. Follow the tutorial: [WebRTC and Node.js: Development of a real-time video chat app](https://tsh.io/blog/how-to-write-video-chat-app-using-webrtc-and-nodejs/))
-1. Publish & test in Azure environment
+1. Follow one of the tutorials and create a WebRTC app
+    - Remember [good coding practices](https://gist.github.com/mattpe/31fe23e372925cf13693a34bf09c92ad)
+1. _Try_ to deploy your app to Azure environment
+    - If you didn't succeed, describe what are the challenges/problems in your report
+    - Some help [How To Deploy a React Application to Heroku](https://www.youtube.com/watch?v=RQcWKcMa_Jc)
 
 Returning: Short report including a written description and source code of your solution and screen shots displaying the working system. Check assignment in OMA.  
 
 Grading: max. 4 points.
 
-BONUS: Consider using [Web App](https://docs.microsoft.com/en-us/azure/app-service/?WT.mc_id=Portal-Microsoft_Azure_Marketplace) service for [hosting your Node.js application](https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs?pivots=platform-linux) in Azure.
+BONUS: Consider using [Web App](https://docs.microsoft.com/en-us/azure/app-service/?WT.mc_id=Portal-Microsoft_Azure_Marketplace) service for [hosting your Node.js application](https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs?pivots=platform-linux) in Azure. More reading: [How To Run and Deploy React with NodeJS Backend on Azure App Services](https://medium.com/bb-tutorials-and-thoughts/how-to-run-and-deploy-react-with-nodejs-backend-on-azure-app-services-b853f6e5234f).
 
 NOTE: If you want to run and serve multiple node.js apps on your server at the same time, it's possible to run them at different ports:
 
