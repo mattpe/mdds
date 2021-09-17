@@ -11,6 +11,7 @@ Browse, read, watch & study:
 - [Azure firewall](https://docs.microsoft.com/en-us/azure/firewall/)
 - [Azure network security group](https://docs.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)
 - [Using Linux command line](https://ubuntu.com/tutorials/command-line-for-beginners)
+- [The Beginner’s Guide to Nano, the Linux Command-Line Text Editor](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
 - [Ubuntu package management](https://ubuntu.com/server/docs/package-management)
 - [Ubuntu firewall](https://ubuntu.com/server/docs/security-firewall)
 
