@@ -6,5 +6,5 @@ Kurssin virtualisointi-, palvelin- ja verkkoympäristöharjoitukset.
 1. [Week 2: IP network & protocols](02-ip-network.md)
 1. [Week 3: WebSockets](03-websockets.md)
 1. [Week 4: Streaming server](04-streaming-server.md)
-1. [Week 5: Internet radio service](#)
+1. [Week 5: Internet radio service](05-internet-radio.md)
 1. Week 6-8: Project work
