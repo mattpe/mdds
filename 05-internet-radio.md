@@ -38,7 +38,7 @@ Building a basic internet radio service. (If you want, you can try using Icecast
 
 ### Server side HTML
 
-1. Create an html page to autoplay your radio channel (html5 audio element)
+1. Create an html page to autoplay your radio channel (use html5 [`<audio>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) with `src` attribute pointing to your stream url on Icecast server)
 1. Note that serving mixed content, e.g. http audio stream on a html page that is served over https causes problems
 
 ## Assignment 5
@@ -48,6 +48,7 @@ Building a basic internet radio service. (If you want, you can try using Icecast
 1. Stream audio (or video) via Icecast from local computer to other client computers
 1. Test playing the stream with another computer (consumer of the stream) e.g. by using VLC as a player software
 1. Create simple html page for playing your stream (Radio player)
+1. Use Icecast admin panel to monitor connections
 
 Returning: Short report including a written description and screen shots displaying the working system. Check assignment in OMA.  
 
