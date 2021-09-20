@@ -13,7 +13,7 @@ Building a basic internet radio service. (If you want, you can try using Icecast
 1. To test open in browser <http://YOUR-IP-OR-HOSTNAME:8000> (or whatever port you set in config)
 1. Extra: Use SSL/TLS to secure the connection using Apache (this is the last step, make sure that system works without TLS encryption first)
 
-### Client side streamer - Option A: BUTT
+### Client side streamer - Option A: BUTT (easiest)
 
 1. Download & install [butt](http://danielnoethen.de/butt/)
 1. Add your Icecast server to _settings_
@@ -31,10 +31,10 @@ Building a basic internet radio service. (If you want, you can try using Icecast
         - Mount point: test (or whatever you like but URL firendly: no äö, spaces, specials characters, etc...)
         - Login:pass: source:your-password (or something else if you changed the source password in config)  
 
-### Client side streamer - Option C: Your choice
+### Client side streamer - Option C: Your choice (preferred)
 
-- Check possibilities to use production devices in media lab?
 - Test/use any other [streaming source software](https://icecast.org/apps/) for streaming to Icecast
+- Check possibilities to use production devices in media lab?
 
 ### Server side HTML
 
