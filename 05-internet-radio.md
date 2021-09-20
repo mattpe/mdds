@@ -34,7 +34,7 @@ Building a basic internet radio service. (If you want, you can try using Icecast
 ### Client side streamer - Option C: Your choice
 
 - Check possibilities to use production devices in media lab?
-- Use any other streaming source software for streaming to Icecast
+- Test/use any other [streaming source software](https://icecast.org/apps/) for streaming to Icecast
 
 ### Server side HTML
 
