@@ -39,7 +39,7 @@ Building a basic internet radio service. (If you want, you can try using Icecast
 ### Server side HTML
 
 1. Create an html page to autoplay your radio channel (use html5 [`<audio>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) with `src` attribute pointing to your stream url on Icecast server)
-1. Note that serving mixed content, e.g. http audio stream on a html page that is served over https causes problems
+1. Note that serving mixed content, e.g. http audio stream on a html page that is served over https causes problems ([Chrome won't work](https://www.howtogeek.com/443032/what-is-mixed-content-and-why-is-chrome-blocking-it/) but you can still try for example with Firefox)
 
 ## Assignment 5
 
