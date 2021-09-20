@@ -11,7 +11,7 @@ Building a basic internet radio service. (If you want, you can try using Icecast
     - Check [configuration](https://icecast.org/docs/icecast-2.4.1/config-file.html) by editing the config file `/etc/icecast2/icecast.xml` (remember to restart with `systemctl` if modified)
 1. Configure your firewall to accept connections from internet to Icecast
 1. To test open in browser <http://YOUR-IP-OR-HOSTNAME:8000> (or whatever port you set in config)
-1. Extra: Use SSL to secure the connection using Apache (this is the last step, make sure that system works without SSL first)
+1. Extra: Use SSL/TLS to secure the connection using Apache (this is the last step, make sure that system works without TLS encryption first)
 
 ### Client side streamer - Option A: BUTT
 
