@@ -61,54 +61,60 @@ Grading: max. 4 points.
 - Tip for Apache SSL/TLS proxy: <https://stackoverflow.com/questions/66096779/icecast-behind-apache-proxy-setup-how-to-preserve-the-original-listener-ip>, following example serves unsecure Icecast service on port 8000 via SSL/TLS secured Apache proxy on port 8001:
   - create _/etc/apache2/sites-available/001-icecast.conf_ and check _000-default-le-ssl.conf_ for server specific details:
 
-        ```conf
-        <IfModule mod_ssl.c>
-        <VirtualHost *:8001>
+    ```conf
+    <IfModule mod_ssl.c>
+    <VirtualHost *:8001>
 
-                ServerAdmin ?????
-                ServerName ?????
+            ServerAdmin ?????
+            ServerName ?????
 
-                ErrorLog ${APACHE_LOG_DIR}/error.log
-                CustomLog ${APACHE_LOG_DIR}/access.log combined
+            ErrorLog ${APACHE_LOG_DIR}/error.log
+            CustomLog ${APACHE_LOG_DIR}/access.log combined
 
-                SSLCertificateFile /etc/letsencrypt/live/????????????????????
-                SSLCertificateKeyFile /etc/letsencrypt/live/????????????????????
-                Include /etc/letsencrypt/options-ssl-apache.conf
+            SSLCertificateFile /etc/letsencrypt/live/????????????????????
+            SSLCertificateKeyFile /etc/letsencrypt/live/????????????????????
+            Include /etc/letsencrypt/options-ssl-apache.conf
 
-                RemoteIPHeader X-Forwarded-For
-                RemoteIPInternalProxy 127.0.0.0/8
+            RemoteIPHeader X-Forwarded-For
+            RemoteIPInternalProxy 127.0.0.0/8
 
-                ProxyPreserveHost On
+            ProxyPreserveHost On
 
-                ProxyPass / http://127.0.0.1:8000/
-                ProxyPassReverse / http://127.0.0.1:8000/
+            ProxyPass / http://127.0.0.1:8000/
+            ProxyPassReverse / http://127.0.0.1:8000/
 
-        </VirtualHost>
-        </IfModule>        
-        ```
+    </VirtualHost>
+    </IfModule>        
+    ```
 
   - _/etc/apache2/ports.conf_, add 8001:
 
-        ```conf
-        Listen 80
-        <IfModule ssl_module>
-                Listen 443
-                Listen 8001
-        </IfModule>
-        <IfModule mod_gnutls.c>
-                Listen 443
-        </IfModule>
-        ```
+    ```conf
+    Listen 80
+    <IfModule ssl_module>
+            Listen 443
+            Listen 8001
+    </IfModule>
+    <IfModule mod_gnutls.c>
+            Listen 443
+    </IfModule>
+    ```
 
   - _/etc/icecast2/icecast.xml_, add to existing `paths` block:
 
-        ```conf
-        <paths>
-            <x-forwarded-for>127.0.0.1</x-forwarded-for>
-            ...
-        </paths>
-        ```
+    ```conf
+    <paths>
+        <x-forwarded-for>127.0.0.1</x-forwarded-for>
+        ...
+    </paths>
+    ```
 
-  - Enable Apache modules & sites and restart servers,`sudo a2enmod proxy proxy_http remoteip`, `sudo a2ensite 001-icecast.conf`, `sudo systemctl restart apache2`, `sudo systemctl restart icecast2`
-
-
+  - Enable Apache modules & sites and restart servers:
+  
+    ```sh
+    sudo a2enmod proxy proxy_http remoteip
+    sudo a2ensite 001-icecast
+    sudo systemctl restart apache2
+    sudo systemctl restart icecast2
+    ```
+    
