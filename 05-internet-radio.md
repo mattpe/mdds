@@ -58,7 +58,7 @@ Grading: max. 4 points.
 
 - More reading: Production grade streaming in Azure: [Media services](https://docs.microsoft.com/en-us/azure/media-services/)
 
-- Tip for Apache SSL/TLS proxy: <https://stackoverflow.com/questions/66096779/icecast-behind-apache-proxy-setup-how-to-preserve-the-original-listener-ip>
+- Tip for Apache SSL/TLS proxy: <https://stackoverflow.com/questions/66096779/icecast-behind-apache-proxy-setup-how-to-preserve-the-original-listener-ip>, following example serves unsecure Icecast service on port 8000 via SSL/TLS secured Apache proxy on port 8001:
   - create _/etc/apache2/sites-available/001-icecast.conf_ and check _000-default-le-ssl.conf_ for server specific details:
 
         ```conf
@@ -109,6 +109,6 @@ Grading: max. 4 points.
         </paths>
         ```
 
-  - `sudo a2enmod remoteip`, `sudo a2ensite 001-icecast.conf`, `sudo systemctl restart apache2`, `sudo systemctl restart icecast2`
+  - Enable Apache modules & sites and restart servers,`sudo a2enmod proxy proxy_http remoteip`, `sudo a2ensite 001-icecast.conf`, `sudo systemctl restart apache2`, `sudo systemctl restart icecast2`
 
 
