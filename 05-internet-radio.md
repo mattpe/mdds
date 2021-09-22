@@ -57,3 +57,5 @@ Grading: max. 4 points.
 ---
 
 - More reading: Production grade streaming in Azure: [Media services](https://docs.microsoft.com/en-us/azure/media-services/)
+
+- Tip for Apache SSL/TLS proxy: <https://stackoverflow.com/questions/66096779/icecast-behind-apache-proxy-setup-how-to-preserve-the-original-listener-ip> 
