@@ -25,8 +25,15 @@ Browse, read, watch & study:
     - NOTE: you have 100 USD to use for the whole course
     - Benefits of using Linux system compared to Windows servers?
 
-1. Use SSH connection for managing your VM
+1. Use SSH connection for managing your VM (`ssh username@PUBLIC_IP` in terminal/git bash or use e.g. [Putty](https://www.putty.org/))
 1. Install Apache (or nginx) & start web server on Linux server
+
+    ```sh
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install apache2
+    ```
+
 1. Add a "physical" firewall resource
 1. Check/fix software firewall status & rules on Linux
 1. Test with a browser that your web server works and is accessible from internet
