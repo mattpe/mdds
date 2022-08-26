@@ -26,6 +26,9 @@ Browse, read, watch & study:
     - Benefits of using Linux system compared to Windows servers?
 
 1. Use SSH connection for managing your VM (`ssh username@PUBLIC_IP` in terminal/git bash or use e.g. [Putty](https://www.putty.org/))
+
+    - Optional: use public key authenication instead of username/password: [Instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-22-04) 
+
 1. Install Apache (or nginx) & start web server on Linux server
 
     ```sh
