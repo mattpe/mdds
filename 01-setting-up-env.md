@@ -34,8 +34,8 @@ Browse, read, watch & study:
     sudo apt install apache2
     ```
 
-1. Add a "physical" firewall resource
-1. Check/fix software firewall status & rules on Linux
+1. Add a "physical" firewall resource or use the already created Network Security Group resource
+1. Check/fix software firewall status & rules on Linux (e.g. limit ssh access)
 1. Test with a browser that your web server works and is accessible from internet
 
 ### Assignment 1 - Requirements
