@@ -29,6 +29,8 @@ network 192.168.2.0
 broadcast 192.168.2.255
 ```
 
+One online tool for calculating subnets & netmasks: [IP Subnet Calculator](https://www.calculator.net/ip-subnet-calculator.html)
+
 ### [IPv6](https://en.wikipedia.org/wiki/IPv6)
 
 - most recent version
