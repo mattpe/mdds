@@ -165,13 +165,20 @@ Example configuration using Let's encrypt's default SSL configuration file (`/et
 
 If working with Ubuntu 20.04 default installation you need to enable modules `proxy`, `proxy_wstunnel` and `proxy_http` by using command `sudo a2enmod <MODULE-NAME>`.
 
-After modifying conf file and enabling modules remember to restart Apache with `systemctl` or `service` command.
+After modifying conf file and enabling modules remember to restart Apache with `systemctl` command: `sudo systemctl restart apache2`.
 
 ---
 
 ## Assignment 3 - Chat application with Socket.IO
 
-1. Prepare your Azure server environment: install _node.js_ and _npm_ (read e.g. [some instructions](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04) and [some other instructions](https://ubunlog.com/en/nodejs-npm-installation-ubuntu-20-04-18-04/))
+1. Prepare your Azure server environment: install _node.js_ and _npm_ (read e.g. [some instructions](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)):
+
+    ```
+    curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+    sudo bash /tmp/nodesource_setup.sh 
+    sudo apt install nodejs
+    ```
+    
 1. Create a website on your server in Azure environment, with input text, which will be broadcasted to other people in the same page, check [Get started](https://socket.io/get-started/chat)
     - Add a textfield for a user to give a nickname (e.g. *Charlie* says "Hello")
     - Add _rooms_ in your app: User can choose a room where she belongs to, and messages posted into a room
