@@ -183,7 +183,7 @@ After modifying conf file and enabling modules remember to restart Apache with `
     - Add a textfield for a user to give a nickname (e.g. *Charlie* says "Hello")
     - Add _rooms_ in your app: User can choose a room where she belongs to, and messages posted into a room
 1. Explain _namespaces_ in Socket.IO? How they are different from rooms and how could you use those in your app?
-1. Run you app behind Apache [reverse proxy](https://socket.io/docs/v4/reverse-proxy/) using secure connection (SSL, port 443)
+1. Run you app behind Apache [reverse proxy](https://socket.io/docs/v4/reverse-proxy/) using secure connection (SSL, port 443), [check example config above](#using-apache-to-serve-the-app-reverse-proxy)
 1. Extra: You might want to use [PM2](https://pm2.keymetrics.io/) or similar to run your node application on server
 
 **Note:** If you like, you can replace sending text with other data, like graphics, sensor data, sound, video...
