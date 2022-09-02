@@ -163,7 +163,7 @@ Example configuration using Let's encrypt's default SSL configuration file (`/et
 </VirtualHost>
 ```
 
-If working with Ubuntu 20.04 default installation you need to enable modules `proxy`, `proxy_wstunnel` and `proxy_http` by using command `sudo a2enmod <MODULE-NAME>`.
+If working with Ubuntu 22.04 default installation you need to enable modules `proxy`, `proxy_wstunnel` and `proxy_http` by using command `sudo a2enmod <MODULE-NAME>`.
 
 After modifying conf file and enabling modules remember to restart Apache with `systemctl` command: `sudo systemctl restart apache2`.
 
