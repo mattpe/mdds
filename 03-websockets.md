@@ -66,6 +66,8 @@
 
 #### Example, simple Socket.IO server
 
+_chat-app/index.js_
+
 ```javascript
 'use strict';
 
@@ -94,21 +96,40 @@ http.listen(3000, () => {
 });
 ```
 
+Install Express & socket.io before running: `npm i express socket.io`
+
 #### Simple Socket.IO client
 
-_html_:
+_chat-app/public/index.html_:
 
 ```html
-<script src="socket.io.js"></script><!-- Socket.IO library -->
-<script src="chat.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+  <script defer src="chat.js"></script>
+  <title>Chat app</title>
+</head>
+<body>
+  <form>
+    <input type="text" id="m">
+    <button type="submit">Send</button>
+    <ul id="messages"></ul>
+  </form>
+</body>
+</html>
 ```
 
-_chat.js_:
+_chat-app/chat.js_:
 
 ```javascript
 'use strict';
 
-const socket = io('http://<YOUR_SERVER_URL>');
+// Server URL below must point to your server, localhost works for local development/testing
+const socket = io('http://localhost:3000');
 
 document.querySelector('form').addEventListener('submit', (event) => {
   event.preventDefault();
