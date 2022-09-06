@@ -96,7 +96,7 @@ http.listen(3000, () => {
 });
 ```
 
-Install Express & socket.io before running: `npm i express socket.io`
+Install Express & socket.io before running: `npm i express socket.io`. Start: `node index.js`
 
 #### Simple Socket.IO client
 
@@ -123,7 +123,7 @@ _chat-app/public/index.html_:
 </html>
 ```
 
-_chat-app/chat.js_:
+_chat-app/public/chat.js_:
 
 ```javascript
 'use strict';
