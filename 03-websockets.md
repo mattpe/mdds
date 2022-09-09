@@ -109,7 +109,7 @@ _chat-app/public/index.html_:
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
   <script defer src="chat.js"></script>
   <title>Chat app</title>
 </head>
@@ -117,8 +117,8 @@ _chat-app/public/index.html_:
   <form>
     <input type="text" id="m">
     <button type="submit">Send</button>
-    <ul id="messages"></ul>
   </form>
+  <ul id="messages"></ul>
 </body>
 </html>
 ```
@@ -204,7 +204,7 @@ After modifying conf file and enabling modules remember to restart Apache with `
     - Add a textfield for a user to give a nickname (e.g. *Charlie* says "Hello")
     - Add _rooms_ in your app: User can choose a room where she belongs to, and messages posted into a room
 1. Explain _namespaces_ in Socket.IO? How they are different from rooms and how could you use those in your app?
-1. Run you app behind Apache [reverse proxy](https://socket.io/docs/v4/reverse-proxy/) using secure connection (SSL, port 443), [check example config above](#using-apache-to-serve-the-app-reverse-proxy)
+1. Optional (for now): Run you app behind Apache [reverse proxy](https://socket.io/docs/v4/reverse-proxy/) using secure connection (SSL, port 443), [check example config above](#using-apache-to-serve-the-app-reverse-proxy)
 1. Extra: You might want to use [PM2](https://pm2.keymetrics.io/) or similar to run your node application on server
 
 **Note:** If you like, you can replace sending text with other data, like graphics, sensor data, sound, video...
