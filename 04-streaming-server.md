@@ -67,6 +67,7 @@ Choose DASH or HSL.
 1. Upload video and manifest files to the web server
 1. Create a simple webpage including `<video>` element for serving and playing the video (see sample html below)
 1. Publish & test on your server in Azure environment
+    - Use Apache webroot (e.g. `/var/www/`) and update Apache configuration (located most likely in `/etc/apache2/sites-available/000-default-le-ssl.conf` file) for correct webroot (it's ok to disable reverse proxy totally for this task)
     - use Chrome dev tools to [simulate](https://www.browserstack.com/guide/how-to-perform-network-throttling-in-chrome) poor connection and make sure that video quality drops accordingly
 
 Sample html page for the player:
