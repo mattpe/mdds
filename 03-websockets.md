@@ -179,7 +179,8 @@ Example configuration using Let's encrypt's default SSL configuration file (`/et
   RewriteCond %{HTTP:Upgrade} WebSocket [NC]
   RewriteCond %{HTTP:Connection} upgrade [NC]
   RewriteRule ^/?(.*) "ws://localhost:3000/$1" [P,L]
-  ProxyTimeout 3
+  # Timeout setting seems to cause continuous connect-disconnect loop betweebn clients & server
+  # ProxyTimeout 3
 
 </VirtualHost>
 ```
@@ -192,7 +193,7 @@ After modifying conf file and enabling modules remember to restart Apache with `
 
 ## Assignment 3 - Chat application with Socket.IO
 
-1. Prepare your Azure server environment: install _node.js_ and _npm_ (read e.g. [some instructions](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)):
+1. Prepare your Azure server environment: install _node.js_ and _npm_ (read e.g. [some instructions](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)):
 
     ```
     curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
