@@ -1,8 +1,10 @@
 # Media Distribution and Data Streams 6
 
-## Tips for the project site hosting
+**Note:** This stuff is mostly React related. If you are publishing basic HTML/CSS/JS web page you can use either Apache's `/var/www/html` folder or a node.js server and Apache proxy just like in assignments.
 
-Deploying & hosting a React application in Azure environment.
+## Tips for the project site hosting 
+
+Deploying & hosting a [React](https://reactjs.org/) application in Azure environment.
 
 ### Option 1: HashRouter, basic build & manual deployment
 
