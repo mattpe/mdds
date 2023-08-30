@@ -76,8 +76,10 @@ Study: [Streaming Protocols: Everything You Need to Know by Traci Ruether/Wowza]
 1. Setup [a SSL certificate](https://www.kaspersky.com/resource-center/definitions/what-is-a-ssl-certificate) for your Web server.
     - [Let’s Encrypt is a free, automated, and open certificate authority (CA)](https://letsencrypt.org/about/)
     - Use [Certbot](https://certbot.eff.org/) for easy installation
-
-2. Setup network security (if not done yet):
+2. Setup [SSH authentication](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) between your server and your Github account.
+    -  Create a Github repo and push your test web site code to Github
+    -  Clone/pull code from Github to your server.
+3. Setup network security (if not done yet):
     - Check your home network's external IP (Google "what's my ip")
     - Check school network's external IP
     - Study what's the [difference between Azure FW and NSG](https://searchcloudcomputing.techtarget.com/answer/Compare-Azure-Firewall-vs-NSGs-for-network-security)
