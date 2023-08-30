@@ -16,7 +16,7 @@ IP network recap.
 
   ![NAT Concept](img/NAT-concept.png)
 
-Basic configuration example in Ubuntu (`/etc/network/interfaces`):
+Basic configuration example in older Ubuntu systems (`/etc/network/interfaces`):
 
 ```conf
 # The primary network interface
@@ -29,14 +29,16 @@ network 192.168.2.0
 broadcast 192.168.2.255
 ```
 
+[Configuring networks Ubuntu documentation](https://ubuntu.com/server/docs/network-configuration)
+
 One online tool for calculating subnets & netmasks: [IP Subnet Calculator](https://www.calculator.net/ip-subnet-calculator.html)
 
 ### [IPv6](https://en.wikipedia.org/wiki/IPv6)
 
-- most recent version
+- most recent version (since 1998 :)
 - 128-bit address, approximately 3.4×10^38 addresses
-- still coming, needs device support
-- e.g. `2a00:1190:0001:0002:0003:0000:0000:ffff` or shortened `2a00:1190:1:2:3::ffff`
+  - hexadecimal format (base 16) e.g. `2a00:1190:0001:0002:0003:0000:0000:ffff` or shortened `2a00:1190:1:2:3::ffff`
+- still coming, needs device support, check [current adoption](https://www.google.com/intl/en/ipv6/statistics.html)
 
 ## OSI vs. TCP/IP Model
 
