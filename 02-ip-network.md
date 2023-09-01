@@ -78,9 +78,10 @@ Study: [Streaming Protocols: Everything You Need to Know by Traci Ruether/Wowza]
 1. Setup [a SSL certificate](https://www.kaspersky.com/resource-center/definitions/what-is-a-ssl-certificate) for your Web server.
     - [Let’s Encrypt is a free, automated, and open certificate authority (CA)](https://letsencrypt.org/about/)
     - Use [Certbot](https://certbot.eff.org/) for easy installation
-2. Setup [SSH authentication](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) between your server and your Github account.
+2. Setup [SSH authentication](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) between your server and your Github account for deploying your web app.
     -  Create a Github repo and push your test web site code to Github
     -  Clone/pull code from Github to your server.
+    -  Copy your public html files to server's web root: `cp -Rv my-web-app/* /var/www/html/` 
 3. Setup network security (if not done yet):
     - Check your home network's external IP (Google "what's my ip")
     - Check school network's external IP
