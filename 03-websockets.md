@@ -201,7 +201,7 @@ After modifying conf file and enabling modules remember to restart Apache with `
     sudo apt install nodejs
     ```
     
-1. Create a chat app/website using Socket.IO, , check [Get started](https://socket.io/get-started/chat)
+1. Create a chat app/website using Socket.IO, check [Get started](https://socket.io/get-started/chat)
    - Add a text input field: user inputs should be broadcasted to other people on the same page
    - Add a text field for a user to give a nickname (e.g. *Charlie* says "Hello")
    - Add _rooms_ in your app: User can choose a room where she belongs to, and messages posted into a room
