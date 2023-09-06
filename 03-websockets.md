@@ -193,10 +193,10 @@ After modifying conf file and enabling modules remember to restart Apache with `
 
 ## Assignment 3 - Chat application with Socket.IO
 
-1. Prepare your Azure server environment: install _node.js_ and _npm_ (read e.g. [some instructions](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)):
+1. Prepare your Azure server environment: install _node.js_ and _npm_ (read [instructions](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04)):
 
     ```
-    curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+    curl -sL https://deb.nodesource.com/setup_20.x -o /tmp/nodesource_setup.sh
     sudo bash /tmp/nodesource_setup.sh 
     sudo apt install nodejs
     ```
