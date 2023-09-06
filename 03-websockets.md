@@ -201,11 +201,13 @@ After modifying conf file and enabling modules remember to restart Apache with `
     sudo apt install nodejs
     ```
     
-1. Create a website on your server in Azure environment, with input text, which will be broadcasted to other people in the same page, check [Get started](https://socket.io/get-started/chat)
-    - Add a textfield for a user to give a nickname (e.g. *Charlie* says "Hello")
-    - Add _rooms_ in your app: User can choose a room where she belongs to, and messages posted into a room
+1. Create a chat app/website using Socket.IO, , check [Get started](https://socket.io/get-started/chat)
+   - Add a text input field: user inputs should be broadcasted to other people on the same page
+   - Add a text field for a user to give a nickname (e.g. *Charlie* says "Hello")
+   - Add _rooms_ in your app: User can choose a room where she belongs to, and messages posted into a room
 1. Explain _namespaces_ in Socket.IO? How they are different from rooms and how could you use those in your app?
-1. Optional (for now): Run you app behind Apache [reverse proxy](https://socket.io/docs/v4/reverse-proxy/) using secure connection (SSL, port 443), [check example config above](#using-apache-to-serve-the-app-reverse-proxy)
+1. Deploy your chat application on your server in Azure environment
+   - Optional (for now): Run you app behind Apache [reverse proxy](https://socket.io/docs/v4/reverse-proxy/) using secure connection (SSL, port 443), [check example config above](#using-apache-to-serve-the-app-reverse-proxy)
 1. Extra: You might want to use [PM2](https://pm2.keymetrics.io/) or similar to run your node application on server
 
 **Note:** If you like, you can replace sending text with other data, like graphics, sensor data, sound, video...
