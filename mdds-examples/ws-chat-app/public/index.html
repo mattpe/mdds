@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="/socket.io/socket.io.js"></script>
-  <script defer src="chat.js"></script>
-  <title>Chat app</title>
-</head>
-<body>
-  <form id="join">
-    <input type="text" id="username">
-    <button type="submit">Liity</button>
-  </form>
-  <form id="msg-input">
-    <input type="text" id="m">
-    <button type="submit">Send</button>
-  </form>
-  <ul id="messages"></ul>
-</body>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="chat.js"></script>
+  </head>
+  <body>
+    <section id="login">
+      <form id="join-form">
+        <input id="username">
+        <button type="submit">Join</button>
+      </form>
+    </section>
+    <section id="chat">
+      <ul id="messages"></ul>
+      <form id="input-form">
+        <input id="message" autocomplete="off" />
+        <button>Send</button>
+      </form>
+    </section>
+  </body>
 </html>

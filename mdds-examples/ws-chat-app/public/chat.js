@@ -1,29 +1,36 @@
-'use strict';
+const socket = io();
+// If server is located on another server use:
+//const socket = io('https://<chat-server-addres>:3000');
 
-// localhost for local dev only
-const socket = io('http://localhost:3000');
-//const socket = io('https://<your-server.xxx>.cloudapp.azure.com');
+const messages = document.getElementById('messages');
+const msgForm = document.getElementById('input-form');
+const msgInput = msgForm.getElementsByTagName('input')[0];
+const joinForm = document.getElementById('join-form');
+const usernameInput = joinForm.getElementsByTagName('input')[0];
+document.getElementById('chat').classList = 'hidden';
 
-document.querySelector('#msg-input').addEventListener('submit', (event) => {
+msgForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  const inp = document.getElementById('m');
-  socket.emit('chat message', inp.value);
-  inp.value = '';
+  if (msgInput.value) {
+    socket.emit('chat message', msgInput.value);
+    msgInput.value = '';
+  }
 });
 
-document.querySelector('#join').addEventListener('submit', (event) => {
+joinForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  const inp = document.getElementById('username');
-  socket.emit('join', inp.value);
-  inp.value = '';
+  if (usernameInput.value) {
+    socket.emit('join', usernameInput.value);
+    usernameInput.value = '';
+    document.getElementById('login').classList = 'hidden';
+    document.getElementById('chat').classList = '';
+    msgInput.focus();
+  }
 });
 
 socket.on('chat message', (msg) => {
   const item = document.createElement('li');
-  item.innerHTML = msg;
-  document.getElementById('messages').appendChild(item);
-});
-
-socket.on('response', (msg) => {
-  console.log(msg);
+  item.textContent = msg;
+  messages.appendChild(item);
+  window.scrollTo(0, document.body.scrollHeight);
 });

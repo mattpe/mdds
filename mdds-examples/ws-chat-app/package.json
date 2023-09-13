@@ -1,17 +1,14 @@
 {
-  "name": "ws-chat-app",
-  "version": "0.0.1",
-  "description": "Web socket lecture example",
-  "main": "index.js",
+  "name": "ws-chat-example",
+  "version": "0.1.0",
   "scripts": {
-    "start": "node_modules/nodemon/bin/nodemon.js index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
-  "author": "mattpe",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.1",
-    "nodemon": "^2.0.19",
-    "socket.io": "^4.5.2"
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
