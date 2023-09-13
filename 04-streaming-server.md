@@ -125,23 +125,23 @@ Consider using [Web App](https://docs.microsoft.com/en-us/azure/app-service/?WT.
   DocumentRoot /var/www/html
 
   # your-server-name.com/chat -> node.js app on port 3000
-  ProxyPass /chat http://localhost:3000/
+  ProxyPass /chat/ http://localhost:3000/
   RewriteEngine on
   RewriteCond %{HTTP:Upgrade} websocket [NC]
   RewriteCond %{HTTP:Connection} upgrade [NC]
-  RewriteRule ^/chat?(.*) "ws://localhost:3000/$1" [P,L]
+  RewriteRule ^/chat/?(.*) "ws://localhost:3000/$1" [P,L]
   
   # your-server-name.com/other-app -> node.js app on port 3003
-  ProxyPass /other-app http://localhost:3003/
+  ProxyPass /other-app/ http://localhost:3003/
   RewriteEngine on
   RewriteCond %{HTTP:Upgrade} websocket [NC]
   RewriteCond %{HTTP:Connection} upgrade [NC]
-  RewriteRule ^/other-app?(.*) "ws://localhost:3003/$1" [P,L]
+  RewriteRule ^/other-app/?(.*) "ws://localhost:3003/$1" [P,L]
   
   #...clip
 
   ```
 
-- then you need to fix your node.js apps to support subpath in URL: [Serving a Node.js Express App From a Subfolder](https://betterprogramming.pub/serving-a-node-js-express-app-from-a-subfolder-a-routing-lifehack-a3c88da9840c)
+- then you need to update your node.js app to support the subpaths in URL references, e.g: `<script src="/socket.io/socket.io.js">`->`<script src="/chat/socket.io/socket.io.js">`
 
 Other (and maybe) better solution for production use compared to using sub-folders would be using separate sub-domains for deployment of separate node.js applications: [Configuring a Subdomain in Apache2](https://codeburst.io/configuring-a-subdomain-in-apache2-f7a8b316b42c). Then you need to use Certbot to generate SSL certificates for the subdomains too. But at first you need to configure [Azure DNS](https://docs.microsoft.com/en-us/azure/dns/dns-zones-records) and add separate DNS records or a wildcard record for your new sub-domains to make them accessible.
